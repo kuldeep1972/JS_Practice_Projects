@@ -42,7 +42,7 @@ function getTasks() {
     //Create a new link
     const link = document.createElement('a');
     //Add class
-    link.className = 'delete-item secondary-content';
+    link.className = 'delete-item secondary-content remove';
     //Add icon html
     link.innerHTML = '<i class="fas fa-trash-alt"></i>';
     //Append link to li
@@ -68,7 +68,7 @@ function addTask(e) {
     //Create a new link
     const link = document.createElement('a');
     //Add class
-    link.className = 'delete-item secondary-content';
+    link.className = 'delete-item secondary-content remove';
     //Add icon html
     link.innerHTML = '<i class="fas fa-trash-alt"></i>';
     //Append link to li
