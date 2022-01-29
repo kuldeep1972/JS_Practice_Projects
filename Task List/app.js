@@ -44,7 +44,7 @@ function getTasks() {
     //Add class
     link.className = 'delete-item secondary-content remove';
     //Add icon html
-    link.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    link.innerHTML = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
     //Append link to li
     li.appendChild(link);
     //Append li to UL
@@ -70,7 +70,7 @@ function addTask(e) {
     //Add class
     link.className = 'delete-item secondary-content remove';
     //Add icon html
-    link.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    link.innerHTML = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
     //Append link to li
     li.appendChild(link);
     //Append li to UL
