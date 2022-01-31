@@ -1,8 +1,17 @@
 //Listen for submit button
-document.getElementById('loan-form').addEventListener('submit', calculateResults);
+document.getElementById('loan-form').addEventListener('submit', function(e) {
+  //Hide the results
+  document.querySelector('#results').style.display = 'none';
+  //Show the loader
+  document.querySelector('#loading').style.display = 'block'
+  
+  setTimeout(calculateResults, 2000);
+
+  e.preventDefault()
+});
 
 //Calculate results
-function calculateResults(e) {
+function calculateResults() {
   
   //UI Vars
   const amount = document.getElementById('amount')
@@ -22,6 +31,10 @@ function calculateResults(e) {
   const monthly = (principal*x*calculatedInterest)/(x-1);
 
   if(isFinite(monthly)){
+  //show the results
+  document.querySelector('#results').style.display = 'block';
+  //hide the loader
+  document.querySelector('#loading').style.display = 'none'
     monthlyPayment.value = monthly.toFixed(2)
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
     totalInterest.value = ((monthly * calculatedPayments)- principal).toFixed(2);
@@ -29,12 +42,15 @@ function calculateResults(e) {
   else{
     showError("Please check your mumbers");
   }
-
-  e.preventDefault()
+  
 }
 
 
 function showError(error){
+    //show the results
+    document.querySelector('#results').style.display = 'none';
+    //hide the loader
+    document.querySelector('#loading').style.display = 'none'
   //Create a div
   const errorDiv = document.createElement('div');
 
