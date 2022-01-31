@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
 .remove{
   font-weight: bold;
   cursor: pointer;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
 }
